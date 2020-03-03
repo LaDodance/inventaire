@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity"
+    >
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearTitleInventory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/listViewProduct"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+
+        >
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inventaire du : "
+            android:gravity="center"
+            android:textSize="25sp"
+            />
+
+        <TextView
+            android:id="@+id/tInventoryDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JJ/MM/YY"
+            android:gravity="center"
+            android:textSize="25sp"
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <ListView
+        android:id="@+id/listViewProduct"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@id/linearButtonGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearTitleInventory"
+
+        >
+
+    </ListView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearButtonGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/listViewProduct"
+
+        >
+
+        <Button
+            android:id="@+id/bHistory"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+
+            android:background="@drawable/ic_storage_24dp" />
+
+
+        <Button
+            android:id="@+id/bSave"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="left"
+            android:layout_marginHorizontal="30dp"
+            android:background="@drawable/ic_save_grey_24dp"
+            android:gravity="left" />
+
+        <Button
+
+            android:id="@+id/bAddProduit"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="right"
+            android:background="@drawable/ic_add_circle_green_40dp"
+            android:gravity="right" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

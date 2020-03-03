@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity"
+    >
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearTitleInventory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linearCollLouant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+
+        >
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contre Inventaire du : "
+            android:gravity="center"
+            android:textSize="25sp"
+            />
+
+        <TextView
+            android:id="@+id/tContreInventaireDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JJ/MM/YY"
+            android:gravity="center"
+            android:textSize="25sp"
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <LinearLayout
+        android:id="@+id/linearCollLouant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/linearTitleInventory"
+        app:layout_constraintBottom_toTopOf="@id/listViewProductContreInventaire"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:text="Locataire :"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tCollectifLocataire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listViewProductContreInventaire"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@id/linearButtonGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearCollLouant"
+
+        >
+
+    </ListView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearButtonGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/listViewProductContreInventaire">
+
+
+        <Button
+            android:id="@+id/bBackToInventory"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_keyboard_backspace24dp" />
+
+        <Button
+            android:id="@+id/bSaveContreInventaire"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="left"
+            android:layout_marginHorizontal="30dp"
+            android:background="@drawable/ic_save_grey_24dp"
+            android:gravity="left" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
